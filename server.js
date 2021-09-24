@@ -8,7 +8,9 @@ const mockUserData=[
     {name:'Mark'},
     {name:'Jill'}
     ]
-    app.get('/users', function(req,res){
+
+
+app.get('/users', function(req,res){
          res.json({
               success: true,
               message: 'successfully got users. Nice!',
@@ -16,7 +18,7 @@ const mockUserData=[
          })
     })
     
-    app.get('/users/:id',function(req,res){
+app.get('/users/:id',function(req,res){
         console.log(req.params.id)
         res.json({
             success: true,
@@ -25,7 +27,7 @@ const mockUserData=[
         })
     })
 
-    app.post('/login',function(req,res){
+app.post('/login',function(req,res){
         const username=req.body.username;
         const password=req.body.password;
     
